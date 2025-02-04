@@ -13,3 +13,9 @@ sudo apt-get install docker.io -y
 sudo docker run hello-world
 ```
 
+4) Installez nginx :
+
+```
+docker run -d nginx
+
+```
