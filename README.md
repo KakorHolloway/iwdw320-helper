@@ -99,7 +99,7 @@ mkdir owncloud-docker-server
 cd owncloud-docker-server
 ```
 
-Créez le fichier docker-compose suivant :
+Créez le fichier docker-compose.yml suivant :
 ```
 version: "3"
 
