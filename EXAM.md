@@ -25,7 +25,7 @@ Avec la commande gitlab-runner register, ajoutez le runner à votre gitlab princ
 Mettez l'image ruby:2.7 par défaut et docker comme executor
 
 
-Créez un nouveau projet sur gitlab nommé CI/CD et poussez ce repo git dessus pour plus tard. 
+Créez un nouveau projet sur gitlab nommé CI/CD (ou autre..) et poussez ce repo git dessus pour plus tard. 
 
 ## Mise en place de la pipeline CI/CD
 
