@@ -16,7 +16,7 @@ build:
   when: manual
 
 deploy:
-  stage: deploy
+  stage: deploy-ansible
   image: 
     name: alpine/ansible
     entrypoint: [""]
