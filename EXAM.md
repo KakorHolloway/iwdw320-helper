@@ -38,7 +38,7 @@ Modifiez la pipeline du fichier .gitlab-ci.yml pour que le conteneur soit déplo
 
 Pour ce faire, renseignez les variables CI_REGISTRY_USER et CI_REGISTRY_PASSWORD sur gitlab. 
 
-## Mise en place d'un fichier docker-compose.yml et démarrage via ansible
+## Mise en place d'un fichier docker-compose.yml et démarrage via ansible OPTIONNEL
 
 Afin de déployer le fichier docker compose, nous allons utiliser un playbook ansible. 
 
