@@ -53,6 +53,8 @@ docker ps -a # vérifiez que c'est bon
  - faites en sorte que nginx écoute sur le port 8080 avec la variable d'environnement NGINX_PORT
  - configurez l'accès depuis votre machine hôte à votre conteneur depuis un navigateur internet (http://ipdemavm:9090)
 
+Pour tester l'env ```docker exec <id> env ```
+
 Correction ```docker run --name "monnginx" -e NGINX_PORT=8080 -p 9090:80 -d nginx:1.26```
 
 Astuce pour tout delete plus vite!
