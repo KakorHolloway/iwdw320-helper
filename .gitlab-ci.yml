@@ -17,6 +17,9 @@ build:
 
 deploy:
   stage: deploy
+  image: 
+    name: alpine/ansible
+    entrypoint: [""]
   script:
     - apk add --no-cache openssh-client bash
     - mkdir -p ~/.ssh
