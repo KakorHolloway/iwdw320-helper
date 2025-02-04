@@ -1,0 +1,26 @@
+stages:
+  - build
+  - deploy-ansible 
+
+build:
+  stage: build
+  image: 
+    name: gcr.io/kaniko-project/executor:v1.9.0-debug
+    entrypoint: [""]
+  script:
+    - echo "{\"auths\":{\"harbor.kakor.ovh\":{\"auth\":\"$(printf "%s:%s" "${CI_REGISTRY_USER}" "${CI_REGISTRY_PASSWORD}" | base64 | tr -d '\n')\"}}}" > /kaniko/.docker/config.json 
+    - /kaniko/executor
+      --context "${CI_PROJECT_DIR}"
+      --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+      --destination "harbor.kakor.ovh/ipi/gp-x/${CI_PROJECT_NAME}:${CI_COMMIT_TAG}"
+  when: manual
+
+deploy:
+  stage: deploy
+  script:
+    - apk add --no-cache openssh-client bash
+    - mkdir -p ~/.ssh
+    - echo "${SSH_PRIVATE_KEY}" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -H <ipserver> >> ~/.ssh/known_hosts
+    - ansible-playbook -i ansible/hosts ansible/playbook.yml

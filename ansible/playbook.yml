@@ -1,0 +1,13 @@
+---
+- name: Copy docker-compose file
+  hosts: docker
+  tasks:
+    - name: Créer un dossier
+      file:
+        path: /path/to/remote/
+        state: directory
+        mode: '0755'
+    - name: Copier le fichier docker-compose.yml
+      copy:
+        src: /path/to/local/docker-compose.yml
+        dest: /path/to/remote/docker-compose.yml
