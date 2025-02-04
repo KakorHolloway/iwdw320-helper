@@ -61,7 +61,7 @@ De fait vous pouvez créer des volumes via ``` docker volume create monvolume ``
 
 Ce volume est stocké dans votre vm sur /var/lib/docker/volumes. 
 
-- Rentrez dans votre conteneur. En regardant dans le dossier /etc/nginx/conf.d, identifiez l'emplacement du fichier index.html responsable de la page d'acceuil nginx
+- Rentrez dans votre conteneur via la commande ```docker exec -it <idconteneur> -- /bin/bash```. En regardant dans le dossier /etc/nginx/conf.d, identifiez l'emplacement du fichier index.html responsable de la page d'acceuil nginx
 
 - Supprimez le conteneur nginx précédemment créé
 - Créez un nouveau volume nginx
