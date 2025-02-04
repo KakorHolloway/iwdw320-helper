@@ -21,7 +21,7 @@ Pour fonctionner avec docker, gitlab-runner doit monter les volumes suivants :
 './runner:/etc/gitlab-runner'
 ```
 
-Avec la commande gitlab-register, ajoutez le runner à votre gitlab principal. 
+Avec la commande gitlab-runner register, ajoutez le runner à votre gitlab principal. 
 
 Créez un nouveau projet sur gitlab nommé CI/CD et poussez ce repo git dessus pour plus tard. 
 
