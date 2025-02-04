@@ -93,10 +93,11 @@ vi /var/lib/docker/volumes/monvolume/_data/index.html
 ```
 
 ## Exemple docker compose 
-Créez le dossier suivant :
+Créez le dossier suivant et installez docker compose:
 ```
 mkdir owncloud-docker-server
 cd owncloud-docker-server
+apt-get install -y docker-compose
 ```
 
 Créez le fichier docker-compose.yml suivant :
@@ -188,7 +189,7 @@ HTTP_PORT=8080
 
 Lancez votre application avec la commande 
 ```
-docker compose up -d 
+docker-compose up -d 
 ```
 
 Testez l'accès à votre application. 
