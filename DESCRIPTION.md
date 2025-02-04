@@ -51,3 +51,5 @@ Lancez la commande suivante pour lancer les conteneurs :
 ```
 docker-compose up -d 
 ```
+
+##Mettez la suite sous la même forme ici.... 
