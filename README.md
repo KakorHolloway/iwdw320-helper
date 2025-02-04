@@ -18,4 +18,5 @@ sudo docker run hello-world
 ```
 docker run -d nginx
 
+docker ps # lister les conteneurs
 ```
