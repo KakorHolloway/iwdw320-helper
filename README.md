@@ -20,3 +20,10 @@ docker run -d nginx
 
 docker ps # lister les conteneurs
 ```
+
+5) Testez nginx 
+
+```
+docker inspect <iddevotreconteneur>
+```
+Faites un curl sur l'ip du conteneur pour vérifier que nginx fonctionne
