@@ -43,3 +43,12 @@ docker rm <idconteneur> # nettoyez tous les conteneurs
 
 docker ps -a # vérifiez que c'est bon 
 ```
+
+## Exercice avec docker 
+
+1) Regardez les options de docker avec ```docker --help```
+2) En une seule commande :
+ - Créez un conteneur nginx avec l'image nginx:1.26 
+ - Donnez lui le nom docker "monnginx"
+ - faites en sorte que nginx écoute sur le port 8080 avec la variable d'environnement NGINX_PORT
+ - configurez l'accès depuis votre machine hôte à votre conteneur depuis un navigateur internet (http://ipdemavm:9090)
