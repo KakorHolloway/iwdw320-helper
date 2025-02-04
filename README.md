@@ -8,5 +8,8 @@
 sudo apt-get update 
 sudo apt-get install docker.io -y
 ```
-
+3) Vérifiez que docker fonctionne bien en lançant cette commande :
+```
+sudo docker run hello-world
+```
 
