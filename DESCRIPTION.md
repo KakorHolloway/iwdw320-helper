@@ -23,7 +23,7 @@ volumes:
 services:
   gitlab:
     restart: unless-stopped
-    image: gitlab/gitlab-ce:latest
+    image: harbor.kakor.ovh/public/gitlab-ce:latest
     container_name: gitlab
     environment:
       GITLAB_OMNIBUS_CONFIG: |
@@ -38,7 +38,7 @@ services:
       - 'logs:/var/log/gitlab'
   gitlab-runner:
     restart: unless-stopped
-    image: gitlab/gitlab-runner
+    image: harbor.kakor.ovh/public/gitlab-runner:latest
     container_name: gitlab-runner
     volumes:
       - '/var/run/docker.sock:/var/run/docker.sock'
