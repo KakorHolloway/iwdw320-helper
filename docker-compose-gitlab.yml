@@ -1,5 +1,7 @@
 version: '3.7'
 volumes:
+  logs:
+    driver: local
   config:
     driver: local
   data:
@@ -14,7 +16,7 @@ services:
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         gitlab_rails['gitlab_shell_ssh_port'] = 2222
-        external_url 'http://172.18.212.234'
+        external_url 'http://<ip>'
     ports:
       - '80:80'
       - '2222:22'
@@ -22,7 +24,7 @@ services:
       - 'data:/var/opt/gitlab'
       - 'config:/etc/gitlab'
       - 'logs:/var/log/gitlab'
-   gitlab-runner:
+  gitlab-runner:
     restart: unless-stopped
     image: gitlab/gitlab-runner
     container_name: gitlab-runner
