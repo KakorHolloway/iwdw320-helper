@@ -10,7 +10,7 @@ Un fichier md présentant le procéssus pour chaque étape est attendu sous le n
 
 A partir de la documentation de gitlab créez le fichier docker-compose.yml permettant de créer un conteneur gitlab qui exposera l'adresse ip de votre machine en *http*
 
-Connectez vous à gitlab. 
+Connectez vous à gitlab. (récupérez le mot de passe sur le conteneur gitlab-ce dans /etc/gitlab/initial_root_password)
 
 Ajoutez à ce fichier docker-compose.yml une section gitlab-runner. Ce conteneur va créer un gitlab-runner qui va lui-même créer des conteneurs sur votre machine qui vont exécuter des commandes spécifiques de votre CI/CD.
 
