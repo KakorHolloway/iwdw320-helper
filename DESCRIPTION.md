@@ -1,0 +1,3 @@
+Lancement dans le dossier gitlab du fichier docker-compose-gitla.yml sous le nom docker-compose.yml via la commande docker-compose up -d 
+
+J'ai récupéré le mot de pase de git via.....
