@@ -7,7 +7,7 @@ mkdir gitlab
 cd gitlab
 ```
 
-Créez le fichier docker-compose.yml dans le dossier gitlab :
+Créez le fichier docker-compose.yml dans le dossier gitlab (en changeant l'adresse ip de gitlab pour celle de la vm) :
 
 ```
 version: '3.7'
