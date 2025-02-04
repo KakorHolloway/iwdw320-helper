@@ -79,3 +79,15 @@ Ce volume est stocké dans votre vm sur /var/lib/docker/volumes.
 - via l'option -v monter un volume sur un conteneur nginx basé sur la commande de l'exercice 2 afin que ce volume soit monté sur le répertoire contenant le fichier index.html
 - Pour vérifier le fonctionnement, éditer le fichier index.html et rechargez la page de votre navigateur
 - vérifiez la persistence en supprimant et en recréant le conteneur tel quel. 
+
+Correction :
+
+```
+#Création du volume 
+docker volume create monvolume
+#Montage du volume 
+docker run --name "monnginx" -e NGINX_PORT=8080 -v monvolume:/usr/share/nginx/html -p 9090:80 -d nginx:1.26
+#Modification du fichier depuis la machine hôte 
+vi /var/lib/docker/volumes/monvolume/_data/index.html
+# Il n'y as plus qu'a supprimer et relancer la deuxième commande pour confirmer la persistence
+```
