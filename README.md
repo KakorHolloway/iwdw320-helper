@@ -53,6 +53,13 @@ docker ps -a # vérifiez que c'est bon
  - faites en sorte que nginx écoute sur le port 8080 avec la variable d'environnement NGINX_PORT
  - configurez l'accès depuis votre machine hôte à votre conteneur depuis un navigateur internet (http://ipdemavm:9090)
 
+Astuce pour tout delete plus vite!
+
+```
+for cont in $(docker ps -aq); do docker stop $cont; done
+for cont in $(docker ps -aq); do docker rm $cont; done
+```
+
 3) Le problème de docker c'est qu'il n'est pas capable de stocker de la donnée persistente. 
 
 En effet si votre conteneur est supprimé, les données sont perdues.
@@ -61,7 +68,7 @@ De fait vous pouvez créer des volumes via ``` docker volume create monvolume ``
 
 Ce volume est stocké dans votre vm sur /var/lib/docker/volumes. 
 
-- Rentrez dans votre conteneur via la commande ```docker exec -it <idconteneur> -- /bin/bash```. En regardant dans le dossier /etc/nginx/conf.d, identifiez l'emplacement du fichier index.html responsable de la page d'acceuil nginx
+- Rentrez dans votre conteneur via la commande ```docker exec -it <idconteneur> /bin/bash```. En regardant dans le dossier /etc/nginx/conf.d, identifiez l'emplacement du fichier index.html responsable de la page d'acceuil nginx
 
 - Supprimez le conteneur nginx précédemment créé
 - Créez un nouveau volume nginx
