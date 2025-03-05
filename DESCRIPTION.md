@@ -8,6 +8,7 @@ Sur la vm je créé le dossier gitlab
 apt-get install docker.io docker-compose -y
 mkdir gitlab
 cd gitlab
+nano docker-compose.yml
 ```
 
 Créez le fichier docker-compose.yml dans le dossier gitlab (en changeant l'adresse ip de gitlab pour celle de la vm) :
@@ -53,6 +54,9 @@ Lancez la commande suivante pour lancer les conteneurs :
 
 ```
 docker-compose up -d 
+
+# après avoir attendu que la page web soit up, récupérez le mot de passe root 
+docker exec gitlab cat /etc/gitlab/initial_root_password
 ```
 
 ## Mise en place du runner 
