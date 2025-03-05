@@ -66,9 +66,17 @@ Pour mettre en place le runner, sur gitlab allez dans le chemin Admin > CI/CD > 
 Afin de créer un runner universel, lors de la création, il faut bien faire attention à cocher la case ```Run untagged jobs```. 
 
 Une fois sur votre VM, rentrez la commande suivante : 
-```docker exec -it gitlab-runner register```
+```docker exec -it gitlab-runner gitlab-runner register  --url http://ipvm  --token glrt-t1_eHsmdYUAniP36Wghp58s```
 
 Et indiquez les différentes informations (url de votre gitlab sous la forme http://monip et le token indiqué sous la forme glrt-salxklzakcjldcj... )
+
+Créez un nouveau projet git
+
+```
+git clone https://github.com/KakorHolloway/iwdw320-helper
+cd iwdw320-helper
+git remote set-url origin <lienduprojet.git>
+```
 
 ## Création du fichier .gitlab-ci.yaml 
 
