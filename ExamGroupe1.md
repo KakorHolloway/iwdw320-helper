@@ -10,7 +10,17 @@ Installez gitlab à partir du fichier docker-compose.yml de ce repo nommé "dock
 
 Renommez ce fichier docker-compose.yml dans votre machine et lancez la commande :
 
-```docker-compose up -d```
+```sudo docker-compose up -d```
+
+Configurez gitlab et gitlab-runner pour que gitlab-runner utilise gitlab.
+
+Afin de lancer des commandes dans un conteneur, vous pouvez utiliser les commandes suivantes :
+
+```
+docker exec -it gitlab-runner /bin/bash
+#ou bien en fonction de l'instance
+docker exec -it gitlab /bin/bash
+```
 
 ## Mise en place du repo 
 
