@@ -30,6 +30,8 @@ Sur le gitlab nouvellement créé, créez un nouveau projet git à partir de cel
 
 Modifiez la pipeline gitlab-ci.yml pour que le nom de l'image créé soit adaptée à celui de votre groupe. 
 
+Modifiez les variables d'authentification par ipi et le mot de passe indiqué au tableau. 
+
 ## Déploiement sur Openshift 
 
 Ajoutez une nouvelle pipeline pour déployer l'application sur openshift à partir de l'image. 
