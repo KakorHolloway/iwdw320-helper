@@ -1,0 +1,5 @@
+services:
+  gitlab:
+    restart: unless-stopped
+    image: harbor.kakor.ovh/ipi/gp-x:v0.0
+    container_name: gitlab

@@ -4,10 +4,13 @@
   tasks:
     - name: Créer un dossier
       file:
-        path: /path/to/remote/
+        path: /root/docker-compose
         state: directory
         mode: '0755'
     - name: Copier le fichier docker-compose.yml
       copy:
-        src: /path/to/local/docker-compose.yml
-        dest: /path/to/remote/docker-compose.yml
+        src: files/docker-compose.yml
+        dest: /root/docker-compose/docker-compose.yml
+    - name: Launch docker docker-compose
+      shell:
+        "docker-compose up -d -f /root/docker-compose/docker-compose.yml"
