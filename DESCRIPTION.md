@@ -81,6 +81,9 @@ cp -r iwdw320-helper/* dossierdevotrerepo/
 cd dossierdevotrerepo/
 git add .
 git commit -am "first commit"
+git config --global user.email "ipi@ipi.com"
+git config --global user.name "IPI"
+git commit -am "first commit"
 # en cas d'erreur du commit lancez les commandes git config indiqués dans l'erreur
 git push 
 ```
