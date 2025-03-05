@@ -22,6 +22,19 @@ docker exec -it gitlab-runner /bin/bash
 docker exec -it gitlab /bin/bash
 ```
 
+Pour transférez ce projet vers votre Gitlab vous pouvez lancer les commandes suivantes :
+```
+git clone https://github.com/KakorHolloway/iwdw320-helper
+git clone http://urldevotreprojetgit.git
+rm -rf iwdw320-helper/.git
+cp -r iwdw320-helper/* dossierdevotrerepo/
+cd dossierdevotrerepo/
+git add .
+git commit -am "first commit"
+# en cas d'erreur du commit lancez les commandes git config indiqués dans l'erreur
+git push 
+```
+
 ## Mise en place du repo 
 
 A partir de maintenant, modifiez le fichier DESCRIPTION.md pour indiquer ce que vous faites pour créer la pipeline et modifier les valeurs des secret par exemple. 
