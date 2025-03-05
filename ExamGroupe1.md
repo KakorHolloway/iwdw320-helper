@@ -26,6 +26,7 @@ Pour transférez ce projet vers votre Gitlab vous pouvez lancer les commandes su
 ```
 git clone https://github.com/KakorHolloway/iwdw320-helper
 git clone http://urldevotreprojetgit.git
+cp iwdw320-helper/.gitlab-ci.yml dossierdevotrerepo/
 rm -rf iwdw320-helper/.git
 cp -r iwdw320-helper/* dossierdevotrerepo/
 cd dossierdevotrerepo/
