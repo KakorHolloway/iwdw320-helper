@@ -1,6 +1,6 @@
 stages:
   - build
-  - deploy-ansible 
+  - deploy
 
 build:
   stage: build
@@ -14,6 +14,14 @@ build:
       --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
       --destination "harbor.kakor.ovh/ipi/gp-x-${CI_PROJECT_NAME}:${CI_COMMIT_TAG}"
   when: manual
+
+deploy:
+  stage: deploy
+  image: 
+    name: harbor.kakor.ovh/public/oc-helm
+  script:
+    - oc login
+    - oc run pod-groupe-x --image=harbor.kakor.ovh/ipi/gp-x-${CI_PROJECT_NAME}:${CI_COMMIT_TAG}
 
 # deploy:
 #   stage: deploy-ansible

@@ -20,6 +20,7 @@ Afin de lancer des commandes dans un conteneur, vous pouvez utiliser les command
 docker exec -it gitlab-runner /bin/bash
 #ou bien en fonction de l'instance
 docker exec -it gitlab /bin/bash
+cat /etc/gitlab/initial_root_password # récupérer le mot de passe
 ```
 
 Pour transférez ce projet vers votre Gitlab vous pouvez lancer les commandes suivantes :
@@ -42,7 +43,7 @@ A partir de maintenant, modifiez le fichier DESCRIPTION.md pour indiquer ce que 
 
 Sur le gitlab nouvellement créé, créez un nouveau projet git à partir de celui-ci (regardez via la commande git set-url)
 
-Modifiez la pipeline gitlab-ci.yml pour que le nom de l'image créé soit adaptée à celui de votre groupe. 
+Modifiez la pipeline .gitlab-ci.yml (attention au point) pour que le nom de l'image créé soit adaptée à celui de votre groupe. 
 
 Modifiez les variables d'authentification CI_REGISTRY_USER par ipi et CI_REGISTRY_PASSWORD par le mot de passe indiqué au tableau. 
 
@@ -57,7 +58,7 @@ oc login --token=sha256~v-aayWujKJno9kFgCTVtkDmXx9JcC7uvSorB588y90Q --server=htt
 oc run pod-groupe-x --image=nomdelimage:tag
 ```
 
-Connectez vous sur l'interface avec le user ipi-gp-10 et le mot de passe indiqué au tableau pour vérifier le déploiement. 
+Connectez vous sur l'interface avec le user ipi-gp-10 et le mot de passe indiqué au tableau pour vérifier le déploiement. (https://console-openshift-console.apps.openshfit.kakor.ovh)
 
 Stockez le token dans une variables gitlab. 
 
