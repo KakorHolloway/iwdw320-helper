@@ -5,6 +5,7 @@
 Sur la vm je créé le dossier gitlab
 
 ```
+apt-get install docker.io docker-compose -y
 mkdir gitlab
 cd gitlab
 ```
