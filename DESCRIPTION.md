@@ -74,8 +74,15 @@ Créez un nouveau projet git
 
 ```
 git clone https://github.com/KakorHolloway/iwdw320-helper
-cd iwdw320-helper
-git remote set-url origin <lienduprojet.git>
+git clone http://urldevotreprojetgit.git
+cp iwdw320-helper/.gitlab-ci.yml dossierdevotrerepo/
+rm -rf iwdw320-helper/.git
+cp -r iwdw320-helper/* dossierdevotrerepo/
+cd dossierdevotrerepo/
+git add .
+git commit -am "first commit"
+# en cas d'erreur du commit lancez les commandes git config indiqués dans l'erreur
+git push 
 ```
 
 ## Création du fichier .gitlab-ci.yaml 
