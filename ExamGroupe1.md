@@ -46,7 +46,7 @@ Modifiez la pipeline gitlab-ci.yml pour que le nom de l'image créé soit adapt�
 
 Modifiez les variables d'authentification CI_REGISTRY_USER par ipi et CI_REGISTRY_PASSWORD par le mot de passe indiqué au tableau. 
 
-## Déploiement sur Openshift 
+## Déploiement sur Openshift (optionnel)
 
 Ajoutez une nouvelle pipeline pour déployer l'application sur openshift à partir de l'image. 
 
